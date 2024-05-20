@@ -1,4 +1,5 @@
 package com.example.elmekki_mobile;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +16,7 @@ public class GameActivity extends AppCompatActivity {
     private TextView rollResultTextView;
     private ImageView diceImageView;
     private TextView diceResultTextView;
+    private TextView gameResultTextView;
     private Button rollDiceButton;
     private Button endGameButton;
 
@@ -33,6 +35,7 @@ public class GameActivity extends AppCompatActivity {
         rollResultTextView = findViewById(R.id.rollResult);
         diceImageView = findViewById(R.id.diceImage);
         diceResultTextView = findViewById(R.id.diceResultText);
+        gameResultTextView = findViewById(R.id.gameResult);
         rollDiceButton = findViewById(R.id.rollDiceButton);
         endGameButton = findViewById(R.id.endGameButton);
 
@@ -76,9 +79,13 @@ public class GameActivity extends AppCompatActivity {
         if (playerFortune <= 0) {
             Toast.makeText(this, "Le joueur a fait faillite !", Toast.LENGTH_LONG).show();
             rollDiceButton.setEnabled(false);
+            gameResultTextView.setText("Le casino gagne !");
+            gameResultTextView.setVisibility(View.VISIBLE);
         } else if (casinoFortune <= 0) {
             Toast.makeText(this, "Le casino a fait faillite !", Toast.LENGTH_LONG).show();
             rollDiceButton.setEnabled(false);
+            gameResultTextView.setText("Le joueur gagne !");
+            gameResultTextView.setVisibility(View.VISIBLE);
         }
     }
 
