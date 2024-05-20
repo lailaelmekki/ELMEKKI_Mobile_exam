@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="backgroundGrayBlack">#333333</color> <!-- Gris noir -->
+    <color name="buttonRed">#FF0000</color> <!-- Rouge -->
+    <color name="buttonTextWhite">#FFFFFF</color> <!-- Blanc -->
+    <color name="importantTextYellow">#FFD700</color> <!-- Doré -->
+    <color name="defaultTextWhite">#FFFFFF</color> <!-- Blanc -->
+</resources>
